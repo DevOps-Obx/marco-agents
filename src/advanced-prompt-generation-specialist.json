@@ -9,11 +9,8 @@
   "meta": {
     "avatar": "💡",
     "description": "I am a specialized Prompt Generation Specialist focusing on expanding user requests into complete system prompts for OBxChat with clarity, context, and professional structure.",
-    "tags": [
-      "admin"
-    ],
-    "title": "Advanced Prompt Generation Specialist",
-    "category": "admin"
+    "tags": [],
+    "title": "Advanced Prompt Generation Specialist"
   },
   "schemaVersion": 1,
   "model": "gpt-4o"
