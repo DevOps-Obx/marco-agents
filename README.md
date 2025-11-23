@@ -75,6 +75,76 @@ Our agents span multiple service areas:
 4. Run `bun run format` to validate
 5. Run `bun run build` to compile
 
+## Deployment
+
+### Vercel Configuration
+
+This project is deployed to Vercel under the **nathanclay-trinitys-projects** workspace.
+
+**Production URL**: https://marco-agents.vercel.app
+
+**⚠️ IMPORTANT**: Always use the `nathanclay-trinitys-projects` workspace for deployments unless specifically instructed otherwise.
+
+### Deployment Workflow
+
+When you modify agents, follow this complete workflow:
+
+```bash
+# 1. Format and validate
+bun run format
+
+# 2. Build across all locales
+bun run build
+
+# 3. Update documentation
+bun run awesome
+
+# 4. Deploy to production
+vercel --prod
+```
+
+### Vercel CLI Commands
+
+**Check current workspace:**
+```bash
+vercel whoami
+# Output: devops-8822
+```
+
+**View project linking:**
+```bash
+cat .vercel/project.json
+# Should show: "orgId": "team_NvG9x0jazsek3zrveMYkol1L"
+```
+
+**Deploy to preview:**
+```bash
+vercel
+```
+
+**Deploy to production:**
+```bash
+vercel --prod
+```
+
+**View deployment logs:**
+```bash
+vercel logs
+```
+
+### Workspace Information
+
+- **Workspace**: nathanclay-trinitys-projects (OuterBox)
+- **Team ID**: team_NvG9x0jazsek3zrveMYkol1L
+- **Project ID**: prj_VALQqQIfQydNddnPj041dDsUOah0
+- **Production Domain**: marco-agents.vercel.app
+
+**Note**: The local `.vercel/` directory contains project linking configuration. Do not commit this directory to version control.
+
+### Auto-Deployment
+
+GitHub pushes to the `master` branch automatically trigger Vercel deployments to production. Manual CLI deployments are available for immediate updates.
+
 ## Contributing
 
 This is an internal OuterBox project. For questions or contributions, contact the development team.
@@ -134,7 +204,7 @@ Identifies at-risk opportunities by analyzing Salesforce Opportunity data for st
 
 <sup>By **[@OuterBox](https://outerboxai.com)** on **2025-02-18**</sup>
 
-Campaign revenue attribution specialist that adapts to your Salesforce schema. Analyzes which campaigns generate revenue when associations exist, provides campaign reference data when they don't. Flexible and transparent about data availability.
+Connects closed-won revenue to marketing campaigns. Executes revenue attribution queries using Campaign.Name, Amount, and IsWon fields. Transparently handles missing campaign-opportunity associations.
 
 `salesforce` `marketing` `roi-analysis` `campaign-management` `attribution`
 
