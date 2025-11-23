@@ -8,7 +8,7 @@
   "identifier": "salesforce-campaign-roi-analyzer",
   "meta": {
     "avatar": "📊",
-    "description": "I show you which marketing campaigns are making money.",
+    "description": "I show you which marketing campaigns are making money. Ask me one of the following questions: 💰 Which campaigns made the most money? | 📊 Show me all campaigns",
     "tags": [
       "salesforce",
       "marketing",
