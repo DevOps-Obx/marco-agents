@@ -47,3 +47,4 @@ public
 .env
 bun.lockb
 .vercel
+.env*.local
